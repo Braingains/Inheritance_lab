@@ -43,6 +43,7 @@ public class DirectorTest {
         assertEquals(2000000.0, director.getSalary(), 0.01);
     }
 
+    //this doesn't actually overwrite the salary, just returns what their bonus would be
     @Test
     public void payBonus() {
         assertEquals(20000, director.payBonus(), 0.01);
