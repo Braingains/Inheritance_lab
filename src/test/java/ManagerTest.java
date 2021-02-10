@@ -18,6 +18,18 @@ public class ManagerTest {
     }
 
     @Test
+    public void canSetName() {
+        manager.setName("Bob");
+        assertEquals("Bob", manager.getName());
+    }
+
+    @Test
+    public void cannotSetNameAsNull() {
+        manager.setName(null);
+        assertEquals("Sandy", manager.getName());
+    }
+
+    @Test
     public void hasNin() {
         assertEquals("123abc", manager.getNin());
     }
@@ -32,6 +44,11 @@ public class ManagerTest {
         assertEquals(30000.0, manager.getSalary(), 0.01);
     }
 
+    @Test
+    public void cannotIncreaseSalaryByNegative() {
+        manager.raiseSalary(-1.0);
+        assertEquals(30000.0, manager.getSalary(), 0.1);
+    }
     @Test
     public void raiseBy100Percent() {
         manager.raiseSalary(1.0);
