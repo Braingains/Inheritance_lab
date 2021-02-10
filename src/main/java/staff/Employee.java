@@ -24,13 +24,13 @@ public abstract class Employee {
         return this.salary;
     }
 
-    public Double raiseSalary(Double raise) {
-        return this.salary * (1 + (raise / 100));
+    public void raiseSalary(Double raise) {
+        this.salary += salary * raise;
         //raise/100 + 1 gives percentage to multiply salary by
     }
 
-    public Double payBonus() {
-        return this.salary * 0.01;
+    public void payBonus() {
+        this.salary += salary * 0.01;
     }
 
 }

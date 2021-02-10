@@ -17,5 +17,32 @@ public class ManagerTest {
         assertEquals("Sandy", manager.getName());
     }
 
+    @Test
+    public void hasNin() {
+        assertEquals("123abc", manager.getNin());
+    }
+
+    @Test
+    public void hasDeptName() {
+        assertEquals("Teaching Staff", manager.getDeptName());
+    }
+
+    @Test
+    public void hasSalary() {
+        assertEquals(30000.0, manager.getSalary(), 0.01);
+    }
+
+    @Test
+    public void raiseBy100Percent() {
+        manager.raiseSalary(1.0);
+        assertEquals(60000.0, manager.getSalary(), 0.01);
+    }
+
+    @Test
+    public void payBonus() {
+        manager.payBonus();
+        assertEquals(30300.0, manager.getSalary(), 0.01);
+    }
+
 
 }
