@@ -9,7 +9,7 @@ public class ManagerTest {
 
     @Before
     public void before(){
-        manager = new Manager("Sandy", "123abc", 30000.0, "Teaching Staff");
+        manager = new Manager("Sandy", "123abc", 30000.0, "Management Staff");
     }
 
     @Test
@@ -24,7 +24,7 @@ public class ManagerTest {
 
     @Test
     public void hasDeptName() {
-        assertEquals("Teaching Staff", manager.getDeptName());
+        assertEquals("Management Staff", manager.getDeptName());
     }
 
     @Test
